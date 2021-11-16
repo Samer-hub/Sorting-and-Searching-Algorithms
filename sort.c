@@ -9,10 +9,12 @@ void printArr(int arr[], int n);
 int partitioning(int arr[], int low, int height);
 void quickSort(int arr[], int low, int height);
 
+int linearSearch(int arr[], int n, int key);
+
 int main(){
     int count = 0;
     int arr [] = {100, 30, 60, 20, 60, 170, 90};
-	int mun = 90;
+	int num = 90;
     int n = sizeof(arr) / sizeof(arr[0]);
     printf("Bubbble Sort: ");
     bubblesort(arr, n);
