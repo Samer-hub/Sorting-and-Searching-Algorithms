@@ -12,6 +12,7 @@ void quickSort(int arr[], int low, int height);
 int main(){
     int count = 0;
     int arr [] = {100, 30, 60, 20, 60, 170, 90};
+	int mun = 90;
     int n = sizeof(arr) / sizeof(arr[0]);
     printf("Bubbble Sort: ");
     bubblesort(arr, n);
@@ -22,6 +23,11 @@ int main(){
     printf("Quick sort: ");
     quickSort(arr, 0, n);
      printArr(arr, n);
+	int result = linearSearch(arr,n,num);
+	if (result == -1)
+		printf("%d was not found. ",num );
+	else
+		printf("The Number : %d Was Found At Index : %d "  , arr[result] ,result);
     return 0;
 }
 
@@ -113,4 +119,14 @@ void swap(int *x, int *y)
     int t = *x;
     *x = *y;
     *y = t;
+}
+
+int linearSearch(int arr[], int n, int key)
+{
+	for (int i = 0; i < n; i++)
+	{
+		if (arr[i] == key)
+			return i;
+	}
+	return-1;
 }
